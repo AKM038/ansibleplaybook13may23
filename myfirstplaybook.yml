@@ -8,4 +8,10 @@
    - name: i want to install webserver on ubuntu  ansible node
      apt:
       name: apache2
-      state: absent
+      state: present
+
+   - name: i want to install wget on ubuntu ansible nodes
+     apt:
+      name: wget
+      state: present
+          
