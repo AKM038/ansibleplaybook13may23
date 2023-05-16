@@ -4,13 +4,13 @@
   tasks: 
   - name: i want to install webserver on ubuntu/redhat nodes
     apt:
-     name: https 
+     name: apache2 
      state: present 
     when: ansible_os_family =="Debian"
 
   - name: i want to start webserver
     service:
-     name: https
+     name: apache2
      state: started 
     when: ansible_os_family =="Debian"
 
