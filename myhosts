@@ -11,5 +11,5 @@
 172.31.1.112
 
 [mywebservers:vars]
-mywebpackonubuntu= apache222222222222222222
+mywebpackonubuntu= apache2
 mywebpackonRedHat= httpd
