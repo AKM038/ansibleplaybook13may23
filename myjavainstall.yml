@@ -1,5 +1,5 @@
 ---
-- hosts: mywebservers,172.31.33.4
+- hosts: mywebservers
   become: yes
   tasks:
   - name: install java on ubuntu
