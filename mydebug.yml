@@ -18,4 +18,4 @@
     apt:
      name: tree
      state: present 
-    when: myfirsttaskresult.strerr ==""       
+    when: myfirsttaskresult.stderr ==""       
