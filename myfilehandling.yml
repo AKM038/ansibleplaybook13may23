@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - include: myfile.yml
-  - include: myplaybookvars.yml
+  - include: myfile2.yml
 
   - name: install webserver
     apt:
