@@ -1,9 +1,18 @@
----
-  vars:
-    myvar01: git 
-    myvar02: tree 
-    myvar03: wget
-  tasks:
-  - name: i want to display myvar01 
-    debug:
-     msg: "{{myvar01}}"  
+--- 
+  - name: install git
+    apt:
+      name: git
+      state: present
+    tags: mygit
+
+  - name: install tree
+    apt:
+      name: tree 
+      state: present 
+    tags: mytree 
+
+  - name: install wget
+    apt:
+      name: wget
+      state: present 
+    tags: mywget          
