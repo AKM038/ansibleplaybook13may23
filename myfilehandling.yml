@@ -8,13 +8,23 @@
   - name: install webserver
     apt:
      name: apache2
-     state: present 
+     state: present
+    notify: restsrtwebserver
+
   - name: copy index file into node side
     copy:
       src: myindexpage
-      dest: /var/www/html/index.html   
+      dest: /var/www/html/index.html
+    notify: restsrtwebserver      
 
   - name: copy dynamic files into nodes
     template:
         src: mydynamicindex.j2
         dest: /var/www/html/index.html
+    notify: restsrtwebserver    
+
+  handlers:
+  - name: restsrtwebserver
+    service:
+       name: apache2
+       state: restarted       
