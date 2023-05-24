@@ -13,3 +13,8 @@
     copy:
       src: myindexpage
       dest: /var/www/html/index.html   
+
+  - name: copy dynamic files into nodes
+    template:
+        src: mydynamicindex.j2
+        dest: /var/www/html/index.html
